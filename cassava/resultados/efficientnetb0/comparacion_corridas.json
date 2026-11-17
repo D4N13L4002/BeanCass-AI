@@ -1,0 +1,173 @@
+{
+  "mejor": "ajuste_fino_20261116_203639",
+  "corridas": [
+    {
+      "corrida": "corrida_20261116_201557",
+      "exactitud_validation": 0.7724,
+      "f1_macro_validation": 0.6754,
+      "f1_por_clase": {
+        "cbb": 0.5041,
+        "cbsd": 0.7478,
+        "cgm": 0.6226,
+        "cmd": 0.8678,
+        "healthy": 0.6344
+      },
+      "recall_por_clase": {
+        "cbb": 0.391,
+        "cbsd": 0.8091,
+        "cgm": 0.5116,
+        "cmd": 0.9211,
+        "healthy": 0.5566
+      },
+      "matriz_confusion": [
+        [
+          61,
+          64,
+          9,
+          17,
+          5
+        ],
+        [
+          18,
+          390,
+          9,
+          59,
+          6
+        ],
+        [
+          3,
+          26,
+          132,
+          90,
+          7
+        ],
+        [
+          2,
+          50,
+          15,
+          817,
+          3
+        ],
+        [
+          2,
+          31,
+          1,
+          13,
+          59
+        ]
+      ]
+    },
+    {
+      "corrida": "ponderada_moderada_20261116_202619",
+      "exactitud_validation": 0.7792,
+      "f1_macro_validation": 0.7041,
+      "f1_por_clase": {
+        "cbb": 0.5802,
+        "cbsd": 0.7431,
+        "cgm": 0.6943,
+        "cmd": 0.8691,
+        "healthy": 0.6337
+      },
+      "recall_por_clase": {
+        "cbb": 0.5449,
+        "cbsd": 0.7261,
+        "cgm": 0.6822,
+        "cmd": 0.8985,
+        "healthy": 0.6038
+      },
+      "matriz_confusion": [
+        [
+          85,
+          38,
+          10,
+          17,
+          6
+        ],
+        [
+          40,
+          350,
+          16,
+          62,
+          14
+        ],
+        [
+          4,
+          13,
+          176,
+          57,
+          8
+        ],
+        [
+          3,
+          41,
+          42,
+          797,
+          4
+        ],
+        [
+          5,
+          18,
+          5,
+          14,
+          64
+        ]
+      ]
+    },
+    {
+      "corrida": "ajuste_fino_20261116_203639",
+      "exactitud_validation": 0.8221,
+      "f1_macro_validation": 0.7647,
+      "f1_por_clase": {
+        "cbb": 0.6644,
+        "cbsd": 0.7932,
+        "cgm": 0.74,
+        "cmd": 0.898,
+        "healthy": 0.7281
+      },
+      "recall_por_clase": {
+        "cbb": 0.6218,
+        "cbsd": 0.7718,
+        "cgm": 0.7558,
+        "cmd": 0.9132,
+        "healthy": 0.7453
+      },
+      "matriz_confusion": [
+        [
+          97,
+          31,
+          9,
+          12,
+          7
+        ],
+        [
+          31,
+          372,
+          16,
+          51,
+          12
+        ],
+        [
+          4,
+          15,
+          195,
+          37,
+          7
+        ],
+        [
+          3,
+          26,
+          42,
+          810,
+          6
+        ],
+        [
+          1,
+          12,
+          7,
+          7,
+          79
+        ]
+      ]
+    }
+  ]
+}
