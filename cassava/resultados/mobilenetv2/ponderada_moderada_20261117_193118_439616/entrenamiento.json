@@ -1,0 +1,27 @@
+{
+  "arquitectura": "MobileNetV2",
+  "corrida": "ponderada_moderada_20261117_193118_439616",
+  "dataset": "cassava",
+  "version_tfds": "0.1.0",
+  "epocas_configuradas": 5,
+  "epocas_ejecutadas": 5,
+  "batch_size": 32,
+  "tamano_imagen": [
+    224,
+    224
+  ],
+  "optimizador": "Adam",
+  "learning_rate": 0.0010000000474974513,
+  "loss": "SparseCategoricalCrossentropy",
+  "pesos_clase": {
+    "0": 1.7137339055793992,
+    "1": 0.891961191961192,
+    "2": 1.2316946959896509,
+    "3": 0.7127915726109857,
+    "4": 2.2898734177215188
+  },
+  "tiempo_entrenamiento_segundos": 1619.56,
+  "parametros_totales": 2264389,
+  "parametros_entrenables": 6405,
+  "prueba_rapida": false
+}

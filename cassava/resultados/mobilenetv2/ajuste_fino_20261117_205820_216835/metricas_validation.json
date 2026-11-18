@@ -1,0 +1,81 @@
+{
+  "corrida": "ajuste_fino_20261117_205820_216835",
+  "exactitud_validation": 0.8084,
+  "f1_macro_validation": 0.7505,
+  "precision_por_clase": {
+    "cbb": 0.6667,
+    "cbsd": 0.7252,
+    "cgm": 0.783,
+    "cmd": 0.9111,
+    "healthy": 0.6957
+  },
+  "f1_por_clase": {
+    "cbb": 0.6111,
+    "cbsd": 0.789,
+    "cgm": 0.7465,
+    "cmd": 0.8819,
+    "healthy": 0.724
+  },
+  "recall_por_clase": {
+    "cbb": 0.5641,
+    "cbsd": 0.8651,
+    "cgm": 0.7132,
+    "cmd": 0.8546,
+    "healthy": 0.7547
+  },
+  "matriz_confusion": [
+    [
+      88,
+      41,
+      9,
+      11,
+      7
+    ],
+    [
+      30,
+      417,
+      7,
+      23,
+      5
+    ],
+    [
+      4,
+      26,
+      184,
+      34,
+      10
+    ],
+    [
+      8,
+      74,
+      34,
+      758,
+      13
+    ],
+    [
+      2,
+      17,
+      1,
+      6,
+      80
+    ]
+  ],
+  "arquitectura": "MobileNetV2",
+  "dataset": "cassava",
+  "version_tfds": "0.1.0",
+  "epocas_configuradas": 8,
+  "epocas_ejecutadas": 6,
+  "batch_size": 32,
+  "tamano_imagen": [
+    224,
+    224
+  ],
+  "optimizador": "Adam",
+  "learning_rate": 9.999999747378752e-05,
+  "loss": "SparseCategoricalCrossentropy",
+  "pesos_clase": null,
+  "tiempo_entrenamiento_segundos": 580.59,
+  "parametros_totales": 2264389,
+  "parametros_entrenables": 1730245,
+  "prueba_rapida": false
+}

@@ -1,0 +1,21 @@
+{
+  "arquitectura": "MobileNetV2",
+  "corrida": "ajuste_fino_20261117_205820_216835",
+  "dataset": "cassava",
+  "version_tfds": "0.1.0",
+  "epocas_configuradas": 8,
+  "epocas_ejecutadas": 6,
+  "batch_size": 32,
+  "tamano_imagen": [
+    224,
+    224
+  ],
+  "optimizador": "Adam",
+  "learning_rate": 9.999999747378752e-05,
+  "loss": "SparseCategoricalCrossentropy",
+  "pesos_clase": null,
+  "tiempo_entrenamiento_segundos": 580.59,
+  "parametros_totales": 2264389,
+  "parametros_entrenables": 1730245,
+  "prueba_rapida": false
+}
