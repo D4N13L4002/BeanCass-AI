@@ -1,0 +1,26 @@
+{
+  "arquitectura": "MobileNetV2",
+  "corrida": "ajuste_fino_20261121_181000_639966",
+  "dataset": "beans",
+  "origen": "Makerere AI Lab - Beans ZIP original",
+  "tamano_particiones": {
+    "train": 1034,
+    "validation": 133,
+    "test": 128
+  },
+  "epocas_configuradas": 8,
+  "epocas_ejecutadas": 8,
+  "batch_size": 32,
+  "tamano_imagen": [
+    224,
+    224
+  ],
+  "optimizador": "Adam",
+  "learning_rate": 9.999999747378752e-05,
+  "loss": "SparseCategoricalCrossentropy",
+  "pesos_clase": null,
+  "tiempo_entrenamiento_segundos": 194.33,
+  "parametros_totales": 2261827,
+  "parametros_entrenables": 1727683,
+  "prueba_rapida": false
+}
