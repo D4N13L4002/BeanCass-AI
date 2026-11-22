@@ -1,0 +1,41 @@
+{
+  "ensayo": 3,
+  "dataset": "beans",
+  "clases": [
+    "angular_leaf_spot",
+    "bean_rust",
+    "healthy"
+  ],
+  "imagen": [
+    224,
+    224,
+    3
+  ],
+  "lote": 64,
+  "epocas_maximas": 30,
+  "optimizador": "Adam",
+  "tasa_inicial": 0.0003,
+  "semilla": 42,
+  "dropout": [
+    0.3,
+    0.2
+  ],
+  "batchnormalization_momentum": 0.9,
+  "aumento": {
+    "volteo": "horizontal_and_vertical",
+    "rotacion": 0.08,
+    "zoom": 0.1
+  },
+  "pesos_por_clase": {
+    "angular_leaf_spot": 0.9990338164251208,
+    "bean_rust": 0.9904214559386973,
+    "healthy": 1.010752688172043
+  },
+  "parametros_totales": 328419,
+  "parametros_entrenables": 327587,
+  "tensorflow": "2.21.0",
+  "seleccion": "menor_val_loss",
+  "lote_validation": 32,
+  "cambio_respecto_ensayo_1": "Lote de entrenamiento de 32 a 64",
+  "inicio": "Pesos nuevos; no continúa ensayos anteriores"
+}

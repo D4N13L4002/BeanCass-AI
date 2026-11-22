@@ -1,0 +1,29 @@
+{
+  "epocas_ejecutadas": 17,
+  "epoca_guardada": 11,
+  "exactitud_validation": 0.8270676691729323,
+  "perdida_validation": 0.42606890201568604,
+  "segundos_entrenamiento": 467.002990900015,
+  "imagenes_validation": 133,
+  "precision_macro": 0.8260252852297255,
+  "recall_macro": 0.826936026936027,
+  "f1_macro": 0.82562686910513,
+  "enfermas_como_sanas": 6,
+  "matriz_confusion": [
+    [
+      32,
+      8,
+      4
+    ],
+    [
+      5,
+      38,
+      2
+    ],
+    [
+      3,
+      1,
+      40
+    ]
+  ]
+}

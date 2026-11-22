@@ -1,0 +1,24 @@
+{
+  "dataset": "beans",
+  "modelo": "CNN propia",
+  "ensayo_seleccionado": 1,
+  "epoca_guardada": 21,
+  "metricas": {
+    "ensayo": 1,
+    "tasa_inicial": 0.0003,
+    "lote": 32,
+    "exactitud": 0.8796992481203008,
+    "precision_macro": 0.8812133492984557,
+    "recall_macro": 0.8797979797979799,
+    "f1_macro": 0.8802126420933297,
+    "perdida": 0.33562418818473816,
+    "enfermas_como_sanas": 4,
+    "epocas_ejecutadas": 27,
+    "epoca_guardada": 21,
+    "minutos": 11.338756341666643,
+    "parametros": 328419
+  },
+  "ruta_modelo": "C:\\Users\\Asus\\Documents\\1 Universidad\\Daniela\\1 Semestres Software\\7 Semestre\\IA\\BeanCass AI\\beans\\resultados\\cnn_propia\\ensayo_01_20261121_201833_819806\\mejor_modelo.keras",
+  "justificacion": "Se conserva el ensayo 1 como representante de la CNN propia de Beans.\n\nPresenta la mayor exactitud, precisión macro, recall macro y F1 macro\nde las tres pruebas, con 117 aciertos entre 133 imágenes.\nSus curvas muestran una evolución más estable que las del ensayo 2.\n\nLa elección reconoce estos compromisos:\n- El ensayo 2 tiene menor pérdida y clasifica menos enfermas como sanas:\n  dos frente a cuatro.\n- El ensayo 2 obtiene un F1 ligeramente mayor en roya y sanas.\n- La diferencia de exactitud entre los ensayos 1 y 2 es de una imagen.\n- El ensayo 3 tarda menos, pero pierde siete aciertos frente al primero.\n- Los tiempos no son directamente equivalentes: se ejecutaron distintas\n  cantidades de épocas y de actualizaciones de pesos.\n- No se realizaron repeticiones para establecer superioridad estadística.\n\nSe selecciona el checkpoint de la época 21 del primer ensayo.\nLa decisión considera métricas, clases, errores, curvas y costo.\nCorresponde al torneo interno de la CNN propia; Test sigue reservado.",
+  "test_utilizado": false
+}
