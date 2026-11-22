@@ -1,0 +1,185 @@
+{
+  "mejor": "ajuste_fino_20261121_181000_639966",
+  "corridas": [
+    {
+      "corrida": "base_sin_aumento_20261121_165924_750727",
+      "exactitud_validation": 0.8872,
+      "f1_macro_validation": 0.886,
+      "precision_por_clase": {
+        "angular_leaf_spot": 0.9211,
+        "bean_rust": 0.8511,
+        "healthy": 0.8958
+      },
+      "f1_por_clase": {
+        "angular_leaf_spot": 0.8537,
+        "bean_rust": 0.8696,
+        "healthy": 0.9348
+      },
+      "recall_por_clase": {
+        "angular_leaf_spot": 0.7955,
+        "bean_rust": 0.8889,
+        "healthy": 0.9773
+      },
+      "matriz_confusion": [
+        [
+          35,
+          6,
+          3
+        ],
+        [
+          3,
+          40,
+          2
+        ],
+        [
+          0,
+          1,
+          43
+        ]
+      ],
+      "arquitectura": "MobileNetV2",
+      "dataset": "beans",
+      "origen": "Makerere AI Lab - Beans ZIP original",
+      "tamano_particiones": {
+        "train": 1034,
+        "validation": 133,
+        "test": 128
+      },
+      "epocas_configuradas": 5,
+      "epocas_ejecutadas": 5,
+      "batch_size": 32,
+      "tamano_imagen": [
+        224,
+        224
+      ],
+      "optimizador": "Adam",
+      "learning_rate": 0.0010000000474974513,
+      "loss": "SparseCategoricalCrossentropy",
+      "pesos_clase": null,
+      "tiempo_entrenamiento_segundos": 98.57,
+      "parametros_totales": 2261827,
+      "parametros_entrenables": 3843,
+      "prueba_rapida": false
+    },
+    {
+      "corrida": "base_con_aumento_20261121_174335_517871",
+      "exactitud_validation": 0.9248,
+      "f1_macro_validation": 0.9247,
+      "precision_por_clase": {
+        "angular_leaf_spot": 0.9111,
+        "bean_rust": 0.907,
+        "healthy": 0.9556
+      },
+      "f1_por_clase": {
+        "angular_leaf_spot": 0.9213,
+        "bean_rust": 0.8864,
+        "healthy": 0.9663
+      },
+      "recall_por_clase": {
+        "angular_leaf_spot": 0.9318,
+        "bean_rust": 0.8667,
+        "healthy": 0.9773
+      },
+      "matriz_confusion": [
+        [
+          41,
+          3,
+          0
+        ],
+        [
+          4,
+          39,
+          2
+        ],
+        [
+          0,
+          1,
+          43
+        ]
+      ],
+      "arquitectura": "MobileNetV2",
+      "dataset": "beans",
+      "origen": "Makerere AI Lab - Beans ZIP original",
+      "tamano_particiones": {
+        "train": 1034,
+        "validation": 133,
+        "test": 128
+      },
+      "epocas_configuradas": 5,
+      "epocas_ejecutadas": 5,
+      "batch_size": 32,
+      "tamano_imagen": [
+        224,
+        224
+      ],
+      "optimizador": "Adam",
+      "learning_rate": 0.0010000000474974513,
+      "loss": "SparseCategoricalCrossentropy",
+      "pesos_clase": null,
+      "tiempo_entrenamiento_segundos": 102.44,
+      "parametros_totales": 2261827,
+      "parametros_entrenables": 3843,
+      "prueba_rapida": false
+    },
+    {
+      "corrida": "ajuste_fino_20261121_181000_639966",
+      "exactitud_validation": 0.9474,
+      "f1_macro_validation": 0.9474,
+      "precision_por_clase": {
+        "angular_leaf_spot": 0.975,
+        "bean_rust": 0.8958,
+        "healthy": 0.9778
+      },
+      "f1_por_clase": {
+        "angular_leaf_spot": 0.9286,
+        "bean_rust": 0.9247,
+        "healthy": 0.9888
+      },
+      "recall_por_clase": {
+        "angular_leaf_spot": 0.8864,
+        "bean_rust": 0.9556,
+        "healthy": 1.0
+      },
+      "matriz_confusion": [
+        [
+          39,
+          5,
+          0
+        ],
+        [
+          1,
+          43,
+          1
+        ],
+        [
+          0,
+          0,
+          44
+        ]
+      ],
+      "arquitectura": "MobileNetV2",
+      "dataset": "beans",
+      "origen": "Makerere AI Lab - Beans ZIP original",
+      "tamano_particiones": {
+        "train": 1034,
+        "validation": 133,
+        "test": 128
+      },
+      "epocas_configuradas": 8,
+      "epocas_ejecutadas": 8,
+      "batch_size": 32,
+      "tamano_imagen": [
+        224,
+        224
+      ],
+      "optimizador": "Adam",
+      "learning_rate": 9.999999747378752e-05,
+      "loss": "SparseCategoricalCrossentropy",
+      "pesos_clase": null,
+      "tiempo_entrenamiento_segundos": 194.33,
+      "parametros_totales": 2261827,
+      "parametros_entrenables": 1727683,
+      "prueba_rapida": false
+    }
+  ]
+}

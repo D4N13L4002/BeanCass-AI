@@ -1,0 +1,32 @@
+{
+  "modelo": "ajuste_fino_20261121_181000_639966",
+  "accuracy_test": 0.96875,
+  "f1_macro_test": 0.9689754689754689,
+  "matriz_confusion": [
+    [
+      42,
+      1,
+      0
+    ],
+    [
+      3,
+      40,
+      0
+    ],
+    [
+      0,
+      0,
+      42
+    ]
+  ],
+  "recall_por_clase": {
+    "angular_leaf_spot": 0.9767441860465116,
+    "bean_rust": 0.9302325581395349,
+    "healthy": 1.0
+  },
+  "f1_por_clase": {
+    "angular_leaf_spot": 0.9545454545454546,
+    "bean_rust": 0.9523809523809523,
+    "healthy": 1.0
+  }
+}
