@@ -1,0 +1,4 @@
+ensayo,corrida,etapa,parte_de,epocas_ejecutadas,inicio_utc,fin_utc,tiempo_medido_s,tiempo_min,segundos_por_epoca
+1,corrida_20261116_204929,etapa inicial: base congelada con volteo horizontal,,5,2026-11-17T01:49:28.182Z,2026-11-17T01:51:06.2Z,98.0,1.63,25;18;18;18;18
+2,ajuste_fino_20261116_205113,ajuste fino (30% superior de la base),parte del ensayo 1,4,2026-11-17T01:51:12.977Z,2026-11-17T01:52:50.4Z,97.4,1.62,32;22;21;21
+1+2,ajuste_fino_20261116_205113,tiempo acumulado del modelo seleccionado,,9,,,195.4,3.26,

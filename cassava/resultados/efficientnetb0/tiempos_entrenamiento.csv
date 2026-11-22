@@ -1,0 +1,5 @@
+ensayo,corrida,etapa,parte_de,epocas_ejecutadas,inicio_utc,fin_utc,tiempo_medido_s,tiempo_min,segundos_por_epoca
+1,corrida_20261116_201557,base congelada sin ponderacion,,5,2026-11-17T01:15:56.205Z,2026-11-17T01:25:14.8Z,558.6,9.31,118;110;110;109;111
+2,ponderada_moderada_20261116_202619,etapa inicial: base congelada con ponderacion moderada,,5,2026-11-17T01:26:18.083Z,2026-11-17T01:35:35.1Z,557.1,9.29,118;110;110;108;109
+3,ajuste_fino_20261116_203639,ajuste fino (30% superior de la base),parte del ensayo 2,5,2026-11-17T01:36:39.082Z,2026-11-17T01:48:14.7Z,695.6,11.59,147;137;139;134;138
+2+3,ajuste_fino_20261116_203639,tiempo acumulado del modelo seleccionado,,10,,,1252.7,20.88,
