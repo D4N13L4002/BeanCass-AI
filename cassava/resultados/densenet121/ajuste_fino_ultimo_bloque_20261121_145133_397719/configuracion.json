@@ -1,0 +1,29 @@
+{
+  "tipo": "ajuste_fino_ultimo_bloque",
+  "carpeta_origen": "C:\\Users\\Asus\\Documents\\1 Universidad\\Daniela\\1 Semestres Software\\7 Semestre\\IA\\BeanCass AI\\cassava\\resultados\\densenet121\\continuacion_congelada_20261121_141219_063524",
+  "epoca_origen": 8,
+  "tasa_inicial": 1e-05,
+  "lote": 32,
+  "epocas_maximas_etapa": 8,
+  "parametros_totales": 7042629,
+  "parametros_entrenables": 2135045,
+  "convoluciones_habilitadas": 32,
+  "batchnormalization_congelada": true,
+  "pesos_por_clase": {
+    "cbb": 1.35,
+    "cbsd": 1.0,
+    "cgm": 1.23,
+    "cmd": 0.85,
+    "healthy": 1.65
+  },
+  "metricas_referencia": {
+    "epoca_guardada": 8,
+    "imagenes_validation": 1889,
+    "exactitud": 0.7649550026469031,
+    "precision_macro": 0.7092295680228246,
+    "recall_macro": 0.6862245636072599,
+    "f1_macro": 0.696051372888667,
+    "val_loss_historial": 0.6563111543655396,
+    "enfermas_como_sanas": 32
+  }
+}

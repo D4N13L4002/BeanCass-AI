@@ -1,0 +1,7 @@
+{
+  "epocas_ejecutadas_etapa": 6,
+  "epoca_guardada_etapa": 6,
+  "segundos_entrenamiento": 1318.0629199999967,
+  "exactitud_modelo_guardado": 0.7723663449287415,
+  "val_loss_modelo_guardado": 0.6299563646316528
+}

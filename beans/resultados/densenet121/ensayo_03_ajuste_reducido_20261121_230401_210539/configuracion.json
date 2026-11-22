@@ -1,0 +1,43 @@
+{
+  "ensayo": 3,
+  "dataset": "beans",
+  "arquitectura": "DenseNet121",
+  "clases": [
+    "angular_leaf_spot",
+    "bean_rust",
+    "healthy"
+  ],
+  "imagen": [
+    224,
+    224,
+    3
+  ],
+  "pesos_iniciales": "imagenet",
+  "base_congelada": false,
+  "dropout": 0.2,
+  "aumento": "volteo_horizontal_solo_train",
+  "lote": 32,
+  "optimizador": "Adam",
+  "tasa_inicial": 1e-05,
+  "epocas_maximas": 6,
+  "pesos_clase": null,
+  "semilla": 42,
+  "seleccion": "menor_val_loss",
+  "paciencia_parada": 3,
+  "parametros_totales": 7040579,
+  "parametros_entrenables": 633859,
+  "tensorflow": "2.21.0",
+  "tipo": "ajuste_fino_reducido",
+  "carpeta_origen": "C:\\Users\\Asus\\Documents\\1 Universidad\\Daniela\\1 Semestres Software\\7 Semestre\\IA\\BeanCass AI\\beans\\resultados\\densenet121\\ensayo_02_continuacion_20261121_224702_513107",
+  "epoca_origen": 9,
+  "unidades_ajustables": [
+    13,
+    14,
+    15,
+    16
+  ],
+  "convoluciones_entrenables": 8,
+  "batchnormalization_congelada": true,
+  "paciencia_reduccion_tasa": 2,
+  "optimizador_restaurado": false
+}

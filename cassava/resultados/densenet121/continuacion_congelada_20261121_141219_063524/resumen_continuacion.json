@@ -1,0 +1,19 @@
+{
+  "tipo": "continuacion_con_base_congelada",
+  "carpeta_origen": "C:\\Users\\Asus\\Documents\\1 Universidad\\Daniela\\1 Semestres Software\\7 Semestre\\IA\\BeanCass AI\\cassava\\resultados\\densenet121\\ponderada_ajustada_20261115_212508",
+  "epoca_origen": 5,
+  "epocas_adicionales": 5,
+  "epoca_guardada": 8,
+  "tasa_inicial": 0.0010000000474974513,
+  "lote": 32,
+  "pesos_por_clase": {
+    "cbb": 1.35,
+    "cbsd": 1.0,
+    "cgm": 1.23,
+    "cmd": 0.85,
+    "healthy": 1.65
+  },
+  "segundos_entrenamiento_adicional": 951.5300023000163,
+  "val_loss_referencia": 0.6793065667152405,
+  "val_loss_seleccionada": 0.6563111543655396
+}

@@ -1,0 +1,32 @@
+{
+  "epoca_origen": 5,
+  "epocas_adicionales": 5,
+  "epocas_ejecutadas": 10,
+  "epoca_guardada": 9,
+  "exactitud_validation": 0.9097744360902256,
+  "perdida_validation": 0.3043951094150543,
+  "segundos_entrenamiento_adicional": 164.59187520001433,
+  "segundos_entrenamiento": 324.7888822000241,
+  "imagenes_validation": 133,
+  "precision_macro": 0.9090449489842817,
+  "recall_macro": 0.9101010101010102,
+  "f1_macro": 0.9092592592592593,
+  "enfermas_como_sanas": 2,
+  "matriz_confusion": [
+    [
+      38,
+      4,
+      2
+    ],
+    [
+      6,
+      39,
+      0
+    ],
+    [
+      0,
+      0,
+      44
+    ]
+  ]
+}

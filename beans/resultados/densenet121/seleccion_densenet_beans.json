@@ -1,0 +1,9 @@
+{
+  "dataset": "beans",
+  "modelo": "DenseNet121",
+  "ensayo_seleccionado": 3,
+  "epoca_ajuste_fino": 6,
+  "ruta_modelo": "C:\\Users\\Asus\\Documents\\1 Universidad\\Daniela\\1 Semestres Software\\7 Semestre\\IA\\BeanCass AI\\beans\\resultados\\densenet121\\ensayo_03_ajuste_reducido_20261121_230401_210539\\mejor_modelo.keras",
+  "justificacion": "Se conserva el ensayo 3: ajuste fino reducido, checkpoint de su época 6.\n\nLa selección considera:\n- Mayor exactitud, precisión macro, recall macro y F1 macro.\n- Menor pérdida de validación.\n- 126 aciertos de 133 imágenes.\n- Pérdida de validación descendente en las seis épocas de ajuste fino.\n- Dos enfermas clasificadas como sanas, igual que en la continuación.\n- Mayor costo acumulado: aproximadamente 8.86 minutos.\n\nLimitaciones:\n- Los siete errores corresponden a mancha angular.\n- Reconoce 37 de 44 casos de esa enfermedad, frente a 38 en el ensayo 2.\n- No se realizaron repeticiones para establecer superioridad estadística.\n- Las curvas favorables no garantizan ausencia de sobreajuste ni el mismo\n  rendimiento con fotografías nuevas.\n- Train utiliza volteo y dropout; Validation no.\n\nLa selección no se basa únicamente en F1 ni en la cercanía de las curvas.\nCorresponde al torneo interno de DenseNet121. Test sigue reservado.",
+  "test_utilizado": false
+}

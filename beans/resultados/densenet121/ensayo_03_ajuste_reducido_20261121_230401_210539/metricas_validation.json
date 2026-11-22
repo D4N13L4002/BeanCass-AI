@@ -1,0 +1,31 @@
+{
+  "epoca_origen": 9,
+  "epocas_ejecutadas": 6,
+  "epoca_guardada": 6,
+  "exactitud_validation": 0.9473684210526315,
+  "perdida_validation": 0.27354151010513306,
+  "segundos_ajuste_fino": 206.66285540000536,
+  "segundos_entrenamiento": 531.4517376000294,
+  "imagenes_validation": 133,
+  "precision_macro": 0.9521739130434783,
+  "recall_macro": 0.9469696969696969,
+  "f1_macro": 0.9462421485813298,
+  "enfermas_como_sanas": 2,
+  "matriz_confusion": [
+    [
+      37,
+      5,
+      2
+    ],
+    [
+      0,
+      45,
+      0
+    ],
+    [
+      0,
+      0,
+      44
+    ]
+  ]
+}

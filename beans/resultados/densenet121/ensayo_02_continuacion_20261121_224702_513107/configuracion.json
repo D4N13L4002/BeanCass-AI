@@ -1,0 +1,36 @@
+{
+  "ensayo": 2,
+  "dataset": "beans",
+  "arquitectura": "DenseNet121",
+  "clases": [
+    "angular_leaf_spot",
+    "bean_rust",
+    "healthy"
+  ],
+  "imagen": [
+    224,
+    224,
+    3
+  ],
+  "pesos_iniciales": "imagenet",
+  "base_congelada": true,
+  "dropout": 0.2,
+  "aumento": "volteo_horizontal_solo_train",
+  "lote": 32,
+  "optimizador": "Adam",
+  "tasa_inicial": 0.001,
+  "epocas_maximas": 10,
+  "pesos_clase": null,
+  "semilla": 42,
+  "seleccion": "menor_val_loss",
+  "paciencia_parada": 2,
+  "parametros_totales": 7040579,
+  "parametros_entrenables": 3075,
+  "tensorflow": "2.21.0",
+  "tipo": "continuacion_con_base_congelada",
+  "carpeta_origen": "C:\\Users\\Asus\\Documents\\1 Universidad\\Daniela\\1 Semestres Software\\7 Semestre\\IA\\BeanCass AI\\beans\\resultados\\densenet121\\ensayo_01_congelada_20261121_223427_266716",
+  "epoca_origen": 5,
+  "epocas_adicionales_maximas": 5,
+  "optimizador_restaurado": true,
+  "cambio_respecto_ensayo_1": "Mayor duración del entrenamiento"
+}

@@ -1,0 +1,10 @@
+{
+  "epoca_guardada": 6,
+  "imagenes_validation": 1889,
+  "exactitud": 0.7723663313922711,
+  "precision_macro": 0.7228697461720212,
+  "recall_macro": 0.6962309632836645,
+  "f1_macro": 0.7056633045932587,
+  "val_loss_historial": 0.6299563646316528,
+  "enfermas_como_sanas": 43
+}

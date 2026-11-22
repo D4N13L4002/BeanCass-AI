@@ -1,0 +1,10 @@
+{
+  "epoca_origen": 5,
+  "epocas_adicionales": 5,
+  "epocas_ejecutadas": 10,
+  "epoca_guardada": 9,
+  "exactitud_validation": 0.9097744226455688,
+  "perdida_validation": 0.3043951094150543,
+  "segundos_entrenamiento_adicional": 164.59187520001433,
+  "segundos_entrenamiento": 324.7888822000241
+}

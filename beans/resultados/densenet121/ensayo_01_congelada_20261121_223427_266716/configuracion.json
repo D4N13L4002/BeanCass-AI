@@ -1,0 +1,30 @@
+{
+  "ensayo": 1,
+  "dataset": "beans",
+  "arquitectura": "DenseNet121",
+  "clases": [
+    "angular_leaf_spot",
+    "bean_rust",
+    "healthy"
+  ],
+  "imagen": [
+    224,
+    224,
+    3
+  ],
+  "pesos_iniciales": "imagenet",
+  "base_congelada": true,
+  "dropout": 0.2,
+  "aumento": "volteo_horizontal_solo_train",
+  "lote": 32,
+  "optimizador": "Adam",
+  "tasa_inicial": 0.001,
+  "epocas_maximas": 5,
+  "pesos_clase": null,
+  "semilla": 42,
+  "seleccion": "menor_val_loss",
+  "paciencia_parada": 2,
+  "parametros_totales": 7040579,
+  "parametros_entrenables": 3075,
+  "tensorflow": "2.21.0"
+}

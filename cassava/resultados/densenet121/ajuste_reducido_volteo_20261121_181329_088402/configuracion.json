@@ -1,0 +1,24 @@
+{
+  "tipo": "ajuste_reducido_con_volteo",
+  "carpeta_origen": "C:\\Users\\Asus\\Documents\\1 Universidad\\Daniela\\1 Semestres Software\\7 Semestre\\IA\\BeanCass AI\\cassava\\resultados\\densenet121\\continuacion_congelada_20261121_141219_063524",
+  "epoca_origen": 8,
+  "unidades_ajustables": [
+    13,
+    14,
+    15,
+    16
+  ],
+  "parametros_entrenables": 635909,
+  "batchnormalization_congelada": true,
+  "aumento": "volteo_horizontal_solo_train",
+  "tasa_inicial": 1e-05,
+  "lote": 32,
+  "epocas_maximas": 6,
+  "pesos_por_clase": {
+    "cbb": 1.35,
+    "cbsd": 1.0,
+    "cgm": 1.23,
+    "cmd": 0.85,
+    "healthy": 1.65
+  }
+}
