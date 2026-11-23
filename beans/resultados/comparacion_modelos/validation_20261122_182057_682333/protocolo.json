@@ -1,0 +1,16 @@
+{
+  "particion_evaluada": "validation",
+  "clases": [
+    "angular_leaf_spot",
+    "bean_rust",
+    "healthy"
+  ],
+  "test_previo_registrado": true,
+  "resultados_test_excluidos_de_seleccion": true,
+  "modelos": {
+    "CNN propia": "C:\\Users\\Asus\\Documents\\1 Universidad\\Daniela\\1 Semestres Software\\7 Semestre\\IA\\BeanCass AI\\beans\\resultados\\cnn_propia\\ensayo_01_20261121_201833_819806",
+    "MobileNetV2": "C:\\Users\\Asus\\Documents\\1 Universidad\\Daniela\\1 Semestres Software\\7 Semestre\\IA\\BeanCass AI\\beans\\resultados\\mobilenetv2\\ajuste_fino_20261121_181000_639966",
+    "EfficientNetB0": "C:\\Users\\Asus\\Documents\\1 Universidad\\Daniela\\1 Semestres Software\\7 Semestre\\IA\\BeanCass AI\\beans\\resultados\\efficientnetb0\\ajuste_fino_20261116_205113",
+    "DenseNet121": "C:\\Users\\Asus\\Documents\\1 Universidad\\Daniela\\1 Semestres Software\\7 Semestre\\IA\\BeanCass AI\\beans\\resultados\\densenet121\\ensayo_03_ajuste_reducido_20261121_230401_210539"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "modelo": "MobileNetV2",
+  "particion": "test",
+  "imagenes": 128,
+  "exactitud": 0.96875,
+  "precision_macro": 0.9696476964769648,
+  "recall_macro": 0.9689922480620154,
+  "f1_macro": 0.9689754689754689,
+  "roc_auc_macro_ovr": 0.9963520291837664,
+  "perdida": 0.0988486111164093,
+  "enfermas_como_sanas": 0,
+  "matriz_confusion": [
+    [
+      42,
+      1,
+      0
+    ],
+    [
+      3,
+      40,
+      0
+    ],
+    [
+      0,
+      0,
+      42
+    ]
+  ],
+  "por_clase": {
+    "angular_leaf_spot": {
+      "aciertos": 42,
+      "total": 43,
+      "precision": 0.9333333333333333,
+      "recall": 0.9767441860465116,
+      "f1": 0.9545454545454546
+    },
+    "bean_rust": {
+      "aciertos": 40,
+      "total": 43,
+      "precision": 0.975609756097561,
+      "recall": 0.9302325581395349,
+      "f1": 0.9523809523809523
+    },
+    "healthy": {
+      "aciertos": 42,
+      "total": 42,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  },
+  "evaluacion_previa_test_registrada": true,
+  "seleccion_realizada_con": "validation"
+}

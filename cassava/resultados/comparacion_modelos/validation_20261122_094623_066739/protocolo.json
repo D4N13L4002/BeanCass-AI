@@ -1,0 +1,27 @@
+{
+  "dataset": "cassava:0.1.0",
+  "imagenes_validation": 1889,
+  "imagenes_sin_coincidencias_conocidas": 1877,
+  "coincidencias_exactas_train_validation": [
+    "validation-cbb-134.jpg",
+    "validation-cbb-142.jpg",
+    "validation-cbb-152.jpg",
+    "validation-cbb-86.jpg",
+    "validation-cbb-94.jpg",
+    "validation-cbsd-148.jpg",
+    "validation-cbsd-300.jpg",
+    "validation-cbsd-339.jpg",
+    "validation-cbsd-72.jpg",
+    "validation-cgm-84.jpg",
+    "validation-cmd-291.jpg",
+    "validation-cmd-813.jpg"
+  ],
+  "revision_coincidencias": "SHA-256 de dimensiones y píxeles originales; lista reconfirmada",
+  "test_evaluado_en_esta_comparacion": false,
+  "modelos_relativos_a_cassava": {
+    "CNN propia": "resultados\\cnn_propia_ajustada\\ensayo_07_lote32_lr0005_20261121_081009_141455",
+    "MobileNetV2": "resultados\\mobilenetv2\\ajuste_fino_20261117_205820_216835",
+    "EfficientNetB0": "resultados\\efficientnetb0\\ajuste_fino_20261116_203639",
+    "DenseNet121": "resultados\\densenet121\\ajuste_fino_ultimo_bloque_20261121_145133_397719"
+  }
+}

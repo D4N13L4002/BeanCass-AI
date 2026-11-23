@@ -1,0 +1,20 @@
+{
+  "modelo": "MobileNetV2",
+  "carpeta_modelo_relativa_a_beans": "resultados\\mobilenetv2\\ajuste_fino_20261121_181000_639966",
+  "archivo_modelo": "mejor_modelo.keras",
+  "epoca_ajuste_fino": 6,
+  "metricas_validation": {
+    "modelo": "MobileNetV2",
+    "exactitud": 0.9473684210526315,
+    "precision_macro": 0.949537037037037,
+    "recall_macro": 0.9473063973063973,
+    "f1_macro": 0.9473555521036493,
+    "roc_auc_macro_ovr": 0.9943328415238527,
+    "perdida": 0.15760540962219238,
+    "enfermas_como_sanas": 1,
+    "parametros": 2261827,
+    "minutos_train_acumulados": 4.946166666666667,
+    "segundos_evaluacion": 4.841451699991012
+  },
+  "justificacion": "Se selecciona MobileNetV2 por su equilibrio entre clasificación y costo:\niguala los 126 aciertos de DenseNet121, utiliza menos parámetros,\npresenta menor pérdida y clasifica una enferma menos como sana.\n\nLa diferencia de F1 macro es pequeña y no constituye el único criterio.\nDenseNet121 presenta curvas más estables y mayor recall de roya.\nMobileNetV2 muestra oscilaciones y señales de sobreajuste al final;\nse conserva su checkpoint de la época 6 del ajuste fino, no la última.\n\nLa selección utiliza Validation. No se consultaron las métricas de Test\ndurante esta comparación. Existe una evaluación previa de Test registrada\npara MobileNetV2, que debe declararse como limitación del protocolo."
+}

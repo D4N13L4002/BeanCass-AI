@@ -1,0 +1,53 @@
+{
+  "modelo": "EfficientNetB0",
+  "carpeta_modelo_relativa_a_cassava": "resultados\\efficientnetb0\\ajuste_fino_20261116_203639",
+  "archivo_modelo": "mejor_modelo.keras",
+  "epoca_ajuste_fino": 3,
+  "metricas_validation_completa": {
+    "modelo": "EfficientNetB0",
+    "conjunto": "validation_completa",
+    "imagenes": 1889,
+    "exactitud": 0.8221281101111699,
+    "precision_macro": 0.7697917401669827,
+    "recall_macro": 0.7615733212784599,
+    "f1_macro": 0.7647427036515128,
+    "roc_auc_macro_ovr": 0.9564978477002863,
+    "perdida": 0.5142385959625244,
+    "enfermas_como_sanas": 32,
+    "minutos_train_acumulados": null,
+    "parametros": 4055976,
+    "epoca_guardada_etapa": 3
+  },
+  "metricas_validation_sin_coincidencias": {
+    "modelo": "EfficientNetB0",
+    "conjunto": "validation_sin_coincidencias_exactas_conocidas",
+    "imagenes": 1877,
+    "exactitud": 0.8241875332978157,
+    "precision_macro": 0.7714807711610356,
+    "recall_macro": 0.7645922698379627,
+    "f1_macro": 0.767234856569481,
+    "roc_auc_macro_ovr": 0.9580612982711211,
+    "perdida": 0.5054790377616882,
+    "enfermas_como_sanas": 32,
+    "minutos_train_acumulados": null,
+    "parametros": 4055976,
+    "epoca_guardada_etapa": 3
+  },
+  "coincidencias_exactas_train_validation": [
+    "validation-cbb-134.jpg",
+    "validation-cbb-142.jpg",
+    "validation-cbb-152.jpg",
+    "validation-cbb-86.jpg",
+    "validation-cbb-94.jpg",
+    "validation-cbsd-148.jpg",
+    "validation-cbsd-300.jpg",
+    "validation-cbsd-339.jpg",
+    "validation-cbsd-72.jpg",
+    "validation-cgm-84.jpg",
+    "validation-cmd-291.jpg",
+    "validation-cmd-813.jpg"
+  ],
+  "seleccion_realizada_con": "validation",
+  "test_evaluado_en_esta_comparacion": false,
+  "justificacion": "Se selecciona EfficientNetB0 por el conjunto de evidencias de Validation.\n\nPresenta la mayor exactitud, precisión macro, recall macro, F1 macro\ny ROC-AUC, además de la menor pérdida entre los cuatro representantes.\nReconoce 1553 de 1889 imágenes y clasifica 32 hojas enfermas como sanas.\n\nLa revisión sobre 1877 imágenes, excluyendo las 12 coincidencias\nexactas conocidas con Train, mantiene su ventaja global.\n\nSe conserva el checkpoint de la época 3 del ajuste fino.\nDespués de ese checkpoint, la pérdida de validación empeora mientras\nla pérdida de entrenamiento continúa descendiendo. Esa señal de\nposible sobreajuste se considera al conservar el mejor checkpoint.\n\nLa elección reconoce estos compromisos:\n- MobileNetV2 reconoce más casos de CBSD: 417 frente a 372.\n- MobileNetV2 reconoce una hoja sana adicional: 80 frente a 79.\n- La CNN propia reconoce dos casos adicionales de CBB: 99 frente a 97.\n- EfficientNetB0 tiene más parámetros que MobileNetV2 y la CNN propia,\n  aunque menos que DenseNet121.\n- Su tiempo registrado es de 20.88 min; se informa como referencia, no como comparación controlada de velocidad.\n- No se realizaron repeticiones para establecer superioridad estadística.\n- Excluir las coincidencias en esta revisión no deshace su participación\n  en las validaciones utilizadas durante los entrenamientos anteriores.\n\nLa selección corresponde a estas condiciones experimentales.\nNo garantiza el mismo desempeño con cualquier fotografía nueva.\nNo se utilizaron resultados de Test para esta comparación."
+}

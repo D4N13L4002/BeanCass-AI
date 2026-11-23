@@ -1,0 +1,170 @@
+{
+  "modelo": "EfficientNetB0",
+  "epoca_ajuste_fino": 3,
+  "seleccion_realizada_con": "validation",
+  "test_completo": {
+    "modelo": "EfficientNetB0",
+    "conjunto": "test_completo",
+    "imagenes": 1885,
+    "exactitud": 0.8228116710875332,
+    "precision_macro": 0.7466452361391218,
+    "recall_macro": 0.764333190226379,
+    "f1_macro": 0.7543579406260615,
+    "roc_auc_macro_ovr": 0.9582256331537792,
+    "perdida": 0.5041307210922241,
+    "enfermas_como_sanas": 40,
+    "minutos_train_acumulados": null,
+    "aciertos": 1551,
+    "parametros": 4055976,
+    "epoca_ajuste_fino": 3,
+    "matriz": [
+      [
+        94,
+        28,
+        9,
+        11,
+        13
+      ],
+      [
+        35,
+        371,
+        29,
+        34,
+        12
+      ],
+      [
+        11,
+        14,
+        202,
+        29,
+        2
+      ],
+      [
+        13,
+        18,
+        37,
+        805,
+        13
+      ],
+      [
+        1,
+        13,
+        6,
+        6,
+        79
+      ]
+    ],
+    "precision": [
+      0.6103896103896104,
+      0.8355855855855856,
+      0.7137809187279152,
+      0.9096045197740112,
+      0.6638655462184874
+    ],
+    "recall": [
+      0.6064516129032258,
+      0.7713097713097713,
+      0.7829457364341085,
+      0.9085778781038375,
+      0.7523809523809524
+    ],
+    "f1": [
+      0.6084142394822006,
+      0.8021621621621622,
+      0.7467652495378928,
+      0.9090909090909091,
+      0.7053571428571429
+    ]
+  },
+  "test_sin_coincidencias": {
+    "modelo": "EfficientNetB0",
+    "conjunto": "test_sin_coincidencias_exactas_con_train_y_validation",
+    "imagenes": 1874,
+    "exactitud": 0.8260405549626467,
+    "precision_macro": 0.751784679732454,
+    "recall_macro": 0.7685753313807789,
+    "f1_macro": 0.7588843739536026,
+    "roc_auc_macro_ovr": 0.9608575594656934,
+    "perdida": 0.4880596399307251,
+    "enfermas_como_sanas": 40,
+    "minutos_train_acumulados": null,
+    "aciertos": 1548,
+    "matriz": [
+      [
+        94,
+        28,
+        8,
+        11,
+        13
+      ],
+      [
+        33,
+        368,
+        29,
+        34,
+        12
+      ],
+      [
+        8,
+        12,
+        202,
+        29,
+        2
+      ],
+      [
+        13,
+        18,
+        37,
+        805,
+        13
+      ],
+      [
+        1,
+        13,
+        6,
+        6,
+        79
+      ]
+    ],
+    "precision": [
+      0.6308724832214765,
+      0.8382687927107062,
+      0.7163120567375887,
+      0.9096045197740112,
+      0.6638655462184874
+    ],
+    "recall": [
+      0.6103896103896104,
+      0.773109243697479,
+      0.7984189723320159,
+      0.9085778781038375,
+      0.7523809523809524
+    ],
+    "f1": [
+      0.6204620462046204,
+      0.8043715846994536,
+      0.7551401869158878,
+      0.9090909090909091,
+      0.7053571428571429
+    ]
+  },
+  "coincidencias_exactas_con_train": [
+    "test-cbb-21.jpg",
+    "test-cbsd-156.jpg",
+    "test-cbsd-213.jpg",
+    "test-cbsd-329.jpg",
+    "test-cbsd-398.jpg",
+    "test-cbsd-91.jpg",
+    "test-cgm-102.jpg",
+    "test-cgm-104.jpg",
+    "test-cgm-136.jpg",
+    "test-cgm-199.jpg",
+    "test-cgm-66.jpg"
+  ],
+  "coincidencias_exactas_con_validation": [
+    "test-cbsd-213.jpg",
+    "test-cgm-102.jpg",
+    "test-cgm-136.jpg",
+    "test-cgm-199.jpg"
+  ]
+}
