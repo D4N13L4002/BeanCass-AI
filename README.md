@@ -8,10 +8,12 @@ DenseNet121 por cultivo; esta aplicación usa los modelos que el estudio selecci
 
 > Herramienta educativa: los resultados son orientativos y **no constituyen un diagnóstico agronómico**.
 
-| Cultivo | Modelo | Clases | Test (estudio) |
-|---|---|---|---|
-| Fréjol | MobileNetV2 (ajuste fino, época 6) | mancha angular, roya, hoja sana | exactitud 96,88 %, F1 macro 0,9690, 4 errores (todos entre enfermedades) |
-| Yuca | EfficientNetB0 (ajuste fino, época 3) | CBB, CBSD, CGM, CMD, hoja sana | exactitud 82,28 %, F1 macro 0,7544, 40 hojas enfermas clasificadas como sanas |
+| Cultivo | Dataset | Modelo seleccionado | Clases | Test del estudio (modelo) |
+|---|---|---|---|---|
+| Fréjol | Beans — Makerere AI Lab | MobileNetV2 (ajuste fino, época 6) | mancha angular, roya, hoja sana | exactitud 96,88 %, F1 macro 0,9690, 4 errores (todos entre enfermedades) |
+| Yuca | iCassava 2019 | EfficientNetB0 (ajuste fino, época 3) | CBB, CBSD, CGM, CMD, hoja sana | exactitud 82,28 %, F1 macro 0,7544, 40 hojas enfermas clasificadas como sanas |
+
+Cada modelo se evaluó con el Test de su propio dataset; estas cifras no comparan ambos datasets como si fueran el mismo problema y no evalúan los filtros de la aplicación.
 
 ---
 
@@ -141,26 +143,25 @@ y la URL interna no se expone.
 - **Privacidad**: la imagen se procesa en memoria (el multipart se parsea sin archivos temporales) y se descarta; los logs
   solo registran método, ruta, estado y duración.
 
-### Avisos de calidad (umbrales calibrados con Validation)
+### Avisos de calidad y reglas de abstención
 
-Un clasificador softmax siempre elige una clase. Por eso cada respuesta incluye `quality.level`:
+Un clasificador softmax siempre elige una clase. La aplicación añade reglas de calidad y puede abstenerse de mostrar una categoría definitiva; esto no reentrena el modelo ni aumenta su exactitud. Cada respuesta incluye `quality.level`:
 
-- `inconclusive`: top-1 < `t_min`, margen top-1 − top-2 < `t_margin`, entropía alta o la foto no parece una hoja. La
-  interfaz **no muestra una categoría** y pide repetir la foto.
+- `inconclusive`: top-1 < `t_min`, margen top-1 − top-2 < `t_margin`, entropía alta o la señal heurística indica posible no-hoja. La
+  interfaz **no presenta una categoría definitiva** y pide repetir la foto.
 - `low_confidence`: top-1 < `t_warn`.
 - En yuca, toda predicción «Hoja sana» incluye un recordatorio de que la clasificación corresponde únicamente a la hoja fotografiada.
 
-Los umbrales se calibraron **solo con los CSV de Validation** del estudio (`api/scripts/calibrar_umbrales.py`; Test no se usó):
+Los umbrales de confianza `t_min`, `t_warn` y `t_margin` identificados como calibrados se ajustaron con los CSV de Validation del estudio (`api/scripts/calibrar_umbrales.py`; Test no se usó para ese ajuste). Los valores no calibrados se indican en la tabla:
 
 | Cultivo | `t_min` | `t_warn` | `t_margin` | Efecto en Validation |
 |---|---|---|---|---|
 | Yuca | 0,65 (calibrado) | 0,90 (calibrado) | 0,40 (calibrado) | 20 % no concluyente; exactitud 50,5 % en ese grupo frente a 90,2 % en el resto |
 | Fréjol | 0,75 (calibrado con solo 6 casos: débil) | 0,80 (**no calibrado**) | 0,10 (**no calibrado**) | 6 de 133 no concluyentes |
 
-La heurística «posible no-hoja» (proporción de píxeles amarillo-verde a verde, umbral 0,12; `calibrar_hoja.py`) no
-afectó a ninguna de las 128 imágenes de Test de Beans ni a 400 de Validation de Cassava, y marcó 19 de 24 fotos
-genéricas. **No detecta paisajes con vegetación**: en 2 de 48 pruebas con fotos que no eran hojas, el modelo de fréjol
-dio una categoría con confianza alta.
+La heurística «posible no-hoja» es una regla separada de esos umbrales de confianza. Su desarrollo incluyó imágenes Test de Beans (128) y Validation de Cassava (400): no marcó ninguna de ellas, y marcó 19 de 24 fotos genéricas. **No detecta paisajes con vegetación ni garantiza reconocer cualquier imagen ajena al cultivo**; en 2 de 48 pruebas con fotos que no eran hojas, el modelo de fréjol dio una categoría con confianza alta.
+
+Las métricas de Test que muestra la aplicación son las reportadas en el estudio para cada modelo seleccionado; no son una evaluación de la aplicación completa con sus reglas de abstención y filtros.
 
 ## Pruebas
 
@@ -214,8 +215,7 @@ alcanza la web). Ambos servicios tienen *healthcheck*; la web espera a que la AP
 
 ## Limitaciones del modelo
 
-- Yuca es el modelo más débil: exactitud ≈ 82 %, recall de CBB ≈ 0,61; CBB y CBSD se confunden; 40 hojas enfermas
-  se clasificaron como sanas en Test. «Hoja sana» en yuca nunca es una garantía.
+- EfficientNetB0 fue el modelo seleccionado para Cassava entre las cuatro arquitecturas evaluadas. En Test de iCassava 2019 obtuvo 82,28 % de exactitud y presentó dificultades especialmente en CBB (recall ≈ 0,61); CBB y CBSD se confunden y 40 hojas enfermas se clasificaron como sanas. Estos resultados no garantizan el mismo desempeño con fotos nuevas. «Hoja sana» en yuca nunca es una garantía.
 - Resultados válidos bajo las condiciones de los datasets (iCassava 2019, Makerere AI Lab Beans); no garantizan el mismo
   desempeño con cualquier fotografía nueva.
 - No hubo repeticiones con distintas semillas; en Cassava hay 12/11 coincidencias exactas Train–Validation/Test (documentadas).

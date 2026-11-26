@@ -129,7 +129,7 @@ export const CROPS_CONTENT: Record<Crop, CropContent> = {
       note: 'CBB (recall ≈ 0,61) y CBSD se confunden entre sí; 40 hojas enfermas se clasificaron como sanas.',
     },
     limitations: [
-      'Es el modelo más débil del estudio: exactitud ≈ 82 % y recall de CBB ≈ 0,61.',
+      'EfficientNetB0 fue seleccionado entre las cuatro arquitecturas evaluadas para Cassava. En Test obtuvo 82,28 % de exactitud y presentó dificultades especialmente en CBB. Estos resultados corresponden a iCassava 2019 y no garantizan el mismo desempeño con fotos nuevas.',
       'Una predicción de «Hoja sana» nunca debe tomarse como garantía de ausencia de enfermedad.',
       'El dataset contiene 12 y 11 imágenes duplicadas entre Train y Validation/Test (documentadas en el estudio).',
     ],

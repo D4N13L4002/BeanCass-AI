@@ -41,6 +41,10 @@ export function AboutModelDialog({ open, onClose, focusCrop }: { open: boolean; 
           Se compararon una CNN propia, MobileNetV2, EfficientNetB0 y DenseNet121 por cultivo. El modelo de cada cultivo se
           eligió con el conjunto de Validation; las métricas de Test se midieron una sola vez sobre el modelo elegido.
         </p>
+        <div className="about-method-note">
+          <p><b>«No concluyente»</b> es una regla de abstención de la aplicación, no un reentrenamiento ni una mejora de exactitud. Los umbrales de confianza marcados como calibrados se ajustaron con Validation.</p>
+          <p>La heurística «posible no-hoja» se desarrolló con análisis que incluyó imágenes Test de Beans y no garantiza reconocer cualquier imagen ajena al cultivo. Las métricas de Test mostradas son del modelo del estudio, no una evaluación de la aplicación con sus filtros.</p>
+        </div>
         <div className="about-grid">
           {orden.map((crop) => {
             const c = CROPS_CONTENT[crop]

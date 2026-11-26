@@ -27,8 +27,6 @@ button { cursor: pointer; }
 .site-footer { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 16px max(5vw, calc((100vw - 1160px)/2)); border-top: 1px solid #e9ece6; color: #929c93; font-size: 9px; background: rgba(255,255,255,.55); }.footer-dot { color: #b0b9b0; padding: 0 4px; }
 @media (max-width: 720px) { .topbar { height: 64px; padding: 0 20px; }.model-caption,.top-divider { display: none; }.page-width { width: min(100% - 36px, 540px); }.home-page { padding-top: 49px; }.hero-copy { margin-bottom: 27px; }.hero-copy h1 { font-size: clamp(35px, 9vw, 46px); }.crop-grid { grid-template-columns: 1fr; gap: 15px; }.crop-photo-wrap { height: 185px; }.crop-card-content { padding-top: 16px; }.card-cta { padding-bottom: 15px; }.home-footer { padding-top: 28px; }.upload-layout { grid-template-columns: 1fr; gap: 18px; }.upload-aside { order: -1; padding: 14px; }.steps { grid-template-columns: repeat(3, 1fr); gap: 7px; padding: 12px 0; }.step { align-items: flex-start; gap: 6px; }.step>div { gap: 3px; }.step b { font-size: 9px; }.step small { font-size: 8px; line-height: 1.35; }.step>span { width: 22px; height: 22px; flex: none; }.model-chip { display: none; }.flow-heading { margin-top: 23px; }.flow-heading h1 { font-size: 36px; }.workflow-page { padding-top: 24px; }.result-top { align-items: flex-start; flex-direction: column; gap: 10px; margin-top: 19px; }.result-top h1 { font-size: 32px; }.simulated-tag { margin: 0; }.result-grid { grid-template-columns: 1fr; gap: 18px; }.result-photo-panel { position: static; }.result-photo-panel>img { max-height: 320px; }.result-content { padding-bottom: 4px; }.mobile-break { display: initial; }.report-sheet { padding: 26px 22px 20px; min-height: auto; }.report-brand>small { max-width: 100px; text-align: right; line-height: 1.4; }.report-image-frame { height: 215px; }.report-columns { gap: 16px; }.report-toolbar .back-link { font-size: 10px; }.download-button { font-size: 9px; padding: 8px; }.site-footer { padding: 14px 18px; align-items: flex-start; flex-direction: column; gap: 5px; }.notice { font-size: 10px; } }
 @media (max-width: 390px) { .top-right .prototype-pill { font-size: 10px; }.page-width { width: calc(100% - 28px); }.crop-photo-wrap { height: 165px; }.steps { grid-template-columns: 1fr; }.step small { display: none; }.report-crop-line { gap: 24px; }.report-brand>small { font-size: 6px; max-width: 80px; }.info-subsections { gap: 7px; }.result-actions { gap: 8px; }.secondary-button { padding: 9px 8px; font-size: 8px; } }
-@media print { @page { size: A4; margin: 0; } body { background: white; } .topbar, .site-footer, .report-toolbar { display: none !important; } .app-shell { min-height: 0; } .report-page { width: 100%; padding: 0; margin: 0; } .report-sheet { width: 100%; min-height: 0; margin: 0; padding: 20mm 18mm 14mm; box-shadow: none; } }
-
 /* --- App funcional: estados, errores, accesibilidad y "Sobre los modelos" (misma paleta del prototipo) --- */
 h1[tabindex="-1"]:focus { outline: none; }
 :where(button, select, a):focus-visible { outline: 2px solid #4f805b; outline-offset: 2px; }
@@ -63,3 +61,51 @@ h1[tabindex="-1"]:focus { outline: none; }
 .about-credits { margin: 16px 0 0; padding-top: 12px; border-top: 1px solid var(--line); font-size: 9px; line-height: 1.6; color: #8a968d; }
 @media (max-width: 720px) { .about-grid { grid-template-columns: 1fr; }.about-card .model-chip { display: flex; }.about-inner { padding: 20px 18px; }.about-head h2 { font-size: 24px; }.result-actions { flex-wrap: wrap; }.push-right { margin-left: 0; }.form-error,.service-banner { flex-wrap: wrap; }.top-right .about-trigger { display: none; } }
 @media print { .about-dialog { display: none; } }
+.report-save-group { display: grid; justify-items: end; gap: 4px; }.report-save-group small { color: #849087; font-size: 9px; line-height: 1.4; text-align: right; }
+.about-method-note { margin: 0 0 18px; padding: 10px 12px; border-left: 2px solid #dfe7dc; background: #f7f9f5; color: #6f7c72; }.about-method-note p { margin: 0; font-size: 10px; line-height: 1.55; }.about-method-note p + p { margin-top: 7px; }
+@media (max-width: 720px) { .report-toolbar { align-items: flex-start; gap: 12px; }.report-save-group { max-width: 62%; }.report-save-group small { max-width: 220px; } }
+
+@media print {
+  @page { size: A4; margin: 12mm 14mm; }
+  body { background: white; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .topbar, .site-footer, .report-toolbar { display: none !important; }
+  .app-shell { display: block; min-height: 0; }
+  .report-page { width: 100%; max-width: none; padding: 0; margin: 0; }
+  .report-sheet { width: 100%; min-height: 0; margin: 0; padding: 0; box-shadow: none; overflow: visible; }
+  .report-brand, .report-title, .report-crop-line, .report-image-frame, .report-result-line,
+  .report-probs, .report-columns, .report-note, .report-closing, .report-columns > div, .report-probs tr {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .report-alerts { break-inside: auto; page-break-inside: auto; }
+  .report-alerts li { break-inside: avoid; page-break-inside: avoid; }
+  .report-title h1, .report-result-line h2, .report-columns h3, .report-probs caption {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+  .report-sheet p { orphans: 3; widows: 3; }
+  .report-rule { margin: 8px 0 14px; }
+  .report-title h1 { margin: 5px 0 4px; font-size: 29px; line-height: 1.08; }
+  .report-title p { font-size: 10px; }
+  .report-crop-line { gap: 40px; margin: 10px 0 8px; padding: 7px 0; }
+  .report-crop-line span { gap: 3px; font-size: 8px; }
+  .report-crop-line b { font-size: 10.5px; }
+  .report-image-frame { height: auto; max-height: 72mm; margin-bottom: 6px; overflow: visible; }
+  .report-image-frame img { max-width: 100%; max-height: 72mm; width: auto; height: auto; object-fit: contain; }
+  .report-result-line { padding: 9px 0; }
+  .report-result-line small { font-size: 8.5px; }
+  .report-result-line h2 { margin: 4px 0; }
+  .report-result-line p, .report-columns p { font-size: 10.5px; line-height: 1.4; }
+  .report-probs { margin: 6px 0 0; font-size: 10px; }
+  .report-probs caption { padding-bottom: 4px; font-size: 8px; }
+  .report-probs th, .report-probs td { padding: 2.5px 0; font-size: 10px; }
+  .report-columns { gap: 20px; padding: 10px 0; }
+  .report-columns h3 { margin-bottom: 4px; }
+  .report-note { margin-bottom: 6px; font-size: 10px; line-height: 1.4; }
+  .report-alerts { margin-bottom: 6px; font-size: 9.5px; line-height: 1.4; }
+  .report-closing { break-inside: avoid; page-break-inside: avoid; }
+  .report-warning { gap: 7px; padding: 8px 9px; }
+  .report-warning p { font-size: 10px; line-height: 1.4; }
+  .report-footer { margin-top: 8px; padding-top: 7px; font-size: 9px; break-inside: avoid; page-break-inside: avoid; }
+  .about-dialog { display: none; }
+}

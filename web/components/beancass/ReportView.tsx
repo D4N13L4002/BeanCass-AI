@@ -34,9 +34,12 @@ export function ReportView({ crop, photo, result, analyzedAt, trueLabel, onBack 
     <section className="report-page page-width">
       <div className="report-toolbar">
         <button className="back-link" onClick={onBack}><ArrowLeft size={16} /> Volver al resultado</button>
-        <button className="download-button" onClick={download} title="Abre el diálogo de impresión: elige «Guardar como PDF»">
-          <Download size={16} /> Descargar PDF
-        </button>
+        <div className="report-save-group">
+          <button className="download-button" onClick={download} title="Abre el diálogo de impresión">
+            <Download size={16} /> Guardar como PDF
+          </button>
+          <small>En el diálogo, elige «Guardar como PDF». Desactiva «Encabezados y pies de página» para excluir la fecha, la URL y la numeración del navegador.</small>
+        </div>
       </div>
       <article className="report-sheet" aria-label="Reporte de clasificación">
         <div className="report-brand">
@@ -92,15 +95,17 @@ export function ReportView({ crop, photo, result, analyzedAt, trueLabel, onBack 
             {result.quality.warnings.map((w) => <li key={w}>{w}</li>)}
           </ul>
         )}
-        <div className="report-warning">
-          <CircleAlert size={17} />
-          <p>
-            Resultado orientativo generado por un modelo entrenado con el dataset {info.dataset}. No sustituye la revisión de un técnico agrícola.
-            La puntuación no garantiza que la clasificación sea correcta. Desempeño del modelo en Test: exactitud {(info.metricsTest.accuracy * 100).toFixed(2).replace('.', ',')} %,
-            F1 macro {info.metricsTest.f1Macro.toFixed(4).replace('.', ',')}.
-          </p>
+        <div className="report-closing">
+          <div className="report-warning">
+            <CircleAlert size={17} />
+            <p>
+              Resultado orientativo generado por un modelo entrenado con el dataset {info.dataset}. No sustituye la revisión de un técnico agrícola.
+              La puntuación no garantiza que la clasificación sea correcta. Métricas del modelo seleccionado en el Test del estudio —no de la aplicación con sus filtros—:
+              exactitud {(info.metricsTest.accuracy * 100).toFixed(2).replace('.', ',')} %, F1 macro {info.metricsTest.f1Macro.toFixed(4).replace('.', ',')}.
+            </p>
+          </div>
+          <div className="report-footer"><span>BeanCass AI · Proyecto universitario UNEMI</span></div>
         </div>
-        <div className="report-footer"><span>BeanCass AI · Proyecto universitario UNEMI</span><span>01 / 01</span></div>
       </article>
     </section>
   )

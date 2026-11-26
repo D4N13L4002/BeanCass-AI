@@ -29,7 +29,7 @@ export function verdict(result: PredictResponse) {
       : result.quality.level === 'low_confidence' ? 'CATEGORÍA MÁS PROBABLE · CONFIANZA MODERADA' : 'CATEGORÍA PREDICHA',
     title: inconclusive ? 'No concluyente' : result.prediction.label_es,
     description: inconclusive
-      ? `Las opciones más probables son ${first.label_es} (${percentLabel(first.probability)} %)${second ? ` y ${second.label_es} (${percentLabel(second.probability)} %)` : ''}. No se emite una categoría: repite la foto.`
+      ? `La aplicación omite una categoría definitiva cuando se activa una regla de calidad. Las opciones más probables son ${first.label_es} (${percentLabel(first.probability)} %)${second ? ` y ${second.label_es} (${percentLabel(second.probability)} %)` : ''}. Repite la foto con buena luz y enfocando una sola hoja.`
       : null,
   }
 }

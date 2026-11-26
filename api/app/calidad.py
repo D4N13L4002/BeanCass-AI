@@ -7,13 +7,13 @@ import math
 import numpy as np
 
 ADV_NO_CONCLUYENTE = (
-    "El modelo no está seguro entre varias categorías. Repite la foto con buena luz, "
-    "enfocando una sola hoja que ocupe la mayor parte del encuadre."
+    "La aplicación omite una categoría definitiva cuando se activa una regla de calidad. "
+    "Repite la foto con buena luz, enfocando una sola hoja que ocupe la mayor parte del encuadre."
 )
 ADV_BAJA_CONFIANZA = "Confianza moderada: interpreta el resultado con precaución."
 ADV_NO_HOJA = (
-    "La imagen no parece contener una hoja (muy poca superficie verde o amarillo-verde). "
-    "Toma una foto de una sola hoja del cultivo, de cerca y con buena luz."
+    "La señal heurística indica que la imagen no parece contener una hoja (poca superficie verde o amarillo-verde); "
+    "no garantiza reconocer todas las imágenes ajenas al cultivo. Toma una foto de una sola hoja, de cerca y con buena luz."
 )
 ADV_CASSAVA_SANA = (
     "La clasificación corresponde únicamente a la hoja fotografiada; continúa observando otras hojas y el estado general del cultivo."
